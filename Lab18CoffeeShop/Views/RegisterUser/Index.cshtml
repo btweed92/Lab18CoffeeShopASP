@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Registration Form";
+}
+
+<h1>Registration</h1>
+
+@model Lab18CoffeeShop.Register
+
+@using (var form = Html.BeginForm())
+{
+    <div class="fields">
+        <div>
+
+            @Html.LabelFor(m => m.UserName)
+            @Html.TextBoxFor(m => m.UserName)
+
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Password)
+            @Html.TextBoxFor(m => m.Password)
+        </div>
+        <input type="submit" value="Submit" />
+    </div>
+}
+
