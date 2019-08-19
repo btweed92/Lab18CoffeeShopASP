@@ -3,26 +3,39 @@
     ViewData["Title"] = "Registration Form";
 }
 
-<h1>Registration</h1>
+<h1 style="color:burlywood;">Registration</h1>
 
 @model Lab18CoffeeShop.Register
 
 @using (var form = Html.BeginForm())
 {
+<div style="color:red; font-weight: bold;">@Html.ValidationSummary()</div>
     <div class="fields">
         <div>
 
-            @Html.LabelFor(m => m.UserName)
+            @Html.LabelFor(m => m.UserName, "User Name")
             @Html.TextBoxFor(m => m.UserName)
 
         </div>
         <div>
-            @Html.LabelFor(m => m.Email)
+            @Html.LabelFor(m => m.Email, "Email Address")
             @Html.TextBoxFor(m => m.Email)
         </div>
         <div>
-            @Html.LabelFor(m => m.Password)
+            @Html.LabelFor(m => m.Password, "Password")
             @Html.TextBoxFor(m => m.Password)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.FirstName, "First Name")
+            @Html.TextBoxFor(m => m.FirstName)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.LastName, "Last Name")
+            @Html.TextBoxFor(m => m.LastName)
+        </div>
+        <div style="width: 322px; background-color: burlywood;">
+            @Html.DropDownListFor(m => m.FavoriteDrink, new SelectList(Enum.GetValues(typeof(FavoriteDrink))), "Favorite Drink", new { @class = "form-control" })
+
         </div>
         <input type="submit" value="Submit" />
     </div>

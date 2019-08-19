@@ -48,9 +48,9 @@ body {
     background-color: peru;
     background-image: url(https://dailycoffeenews.com/wp-content/uploads/2018/10/coffee-801781_1280.jpg);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: center;
-    background-size: 31%;
+    /*background-size: 31%;*/
 }
 .footer {
   position: absolute;
@@ -71,4 +71,7 @@ body {
 .fields label
 {
     position: fixed;
+    color:burlywood;
 }
+
+

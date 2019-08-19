@@ -21,7 +21,14 @@ namespace Lab18CoffeeShop.Controllers
 
         public IActionResult Welcome(Register register)
         {
-            return View(register);
+            if (ModelState.IsValid)
+            {
+                return View(register);
+            }
+            else
+            {
+                return View("Index", register);
+            }
         }
     }
 }

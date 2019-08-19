@@ -3,9 +3,23 @@
     ViewData["Title"] = "Welcome";
 }
 
-<h1>Welcome</h1>
+@*<h1 class="welcome" style="color: burlywood;">Welcome</h1>*@
 
 @model  Lab18CoffeeShop.Register
 
-<p>Wlecome, @Model.UserName</p>
+<p style="color: burlywood;">Welcome to your user profile, @Model.FirstName!</p>
+<br />
+<p style="color:burlywood;">We have the following information listed for you:</p>
+
+<ul style="color: burlywood;">
+    <p>First Name: @Model.FirstName</p>
+    
+    <p>Last Name: @Model.LastName</p>
+    
+    <p>Username: @Model.UserName</p>
+    
+    <p>Favorite Drink: @Model.FavoriteDrink</p>
+</ul>
+
+
 
