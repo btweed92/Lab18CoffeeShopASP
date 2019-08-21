@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lab18CoffeeShop
+namespace Lab18CoffeeShop.Models
 {
-    public class Register
+    public class RegisterUser
     {
         [Required(ErrorMessage = "Please enter a valid username!")]
         public string UserName { get; set; }
@@ -25,6 +25,7 @@ namespace Lab18CoffeeShop
     {
         Coffee,
         Latte,
-        Tea        
+        Tea
     }
 }
+

@@ -5,11 +5,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Lab18CoffeeShop.Models;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 
 namespace Lab18CoffeeShop.Controllers
 {
     public class HomeController : Controller
     {
+        
+        
         public IActionResult Index()
         {
             return View();
@@ -25,5 +29,7 @@ namespace Lab18CoffeeShop.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        
     }
 }

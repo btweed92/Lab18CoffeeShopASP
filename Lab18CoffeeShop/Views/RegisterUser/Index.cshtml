@@ -5,7 +5,7 @@
 
 <h1 style="color:burlywood;">Registration</h1>
 
-@model Lab18CoffeeShop.Register
+@model Lab18CoffeeShop.Models.RegisterUser
 
 @using (var form = Html.BeginForm())
 {
@@ -33,7 +33,7 @@
             @Html.LabelFor(m => m.LastName, "Last Name")
             @Html.TextBoxFor(m => m.LastName)
         </div>
-        <div style="width: 322px; background-color: burlywood;">
+        <div class="select" style="width: 322px;">
             @Html.DropDownListFor(m => m.FavoriteDrink, new SelectList(Enum.GetValues(typeof(FavoriteDrink))), "Favorite Drink", new { @class = "form-control" })
 
         </div>

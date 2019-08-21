@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "ListOfUsers";
+}
+
+<h1>ListOfUsers</h1>
+
+
+@model IEnumerable<Lab18CoffeeShop.Models.RegisterUser>
+
+<table class="table" style=" opacity: 0.5; background-color: burlywood; ">
+    <tr>
+        <th>UserName</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>FavoriteDrink</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.UserName</td>
+            <td>@item.Email</td>
+            <td>@item.Password</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.FavoriteDrink</td>
+        </tr>
+    }
+</table>
